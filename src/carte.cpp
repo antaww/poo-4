@@ -35,6 +35,15 @@ Carte::Carte(Couleur couleur_carte, std::string const& valeur_carte) {
     this->valeur = valeur_carte;
 }
 
+Carte::Carte(const Carte &carte) {
+    this->couleur = carte.couleur;
+    this->valeur = carte.valeur;
+}
+
+Carte::~Carte() {
+    std::cout << "Destruction de la carte" << std::endl;
+}
+
 void Carte::afficher() {
     std::cout << this->valeur << " de " << Couleurs[this->couleur] << std::endl;
 }
@@ -60,7 +69,4 @@ bool Carte::equals(Carte carte) {
     }
 }
 
-Carte::Carte(const Carte &carte) {
-    this->couleur = carte.couleur;
-    this->valeur = carte.valeur;
-}
+

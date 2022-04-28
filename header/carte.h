@@ -16,13 +16,14 @@ enum Couleur {
 };
 
 class Carte {
-private:
-    std::string valeur;
-    Couleur couleur;
+
 public:
     Carte(Couleur couleur_carte, std::string const& valeur_carte);
 
     Carte(Carte const& carte);
+
+    ~Carte();
+
 
     void afficher();
 
@@ -33,4 +34,7 @@ public:
     void affecter(Carte carte);
 
     bool equals(Carte carte);
+private:
+    std::string valeur;
+    Couleur couleur;
 };

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <limits>
 #include "../header/menu.h"
+#include "../header/carte.h"
 
 
 
@@ -54,7 +55,7 @@ void Menu::execute() {
                 std::cout << "Fin du programme" << std::endl;
                 break;
             case 1:
-//                TP3_1::execute();
+                carte();
                 std::cout << "TP 3.1" << std::endl;
                 break;
             case 2:
