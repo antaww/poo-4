@@ -43,16 +43,16 @@ void Carte::setType(Couleur couleur) {
     this->couleur = couleur;
 }
 
-void Carte::setValeur(const char *string) {
-    this->valeur = string;
+void Carte::setValeur(std::string const& valeur_carte) {
+    this->valeur = valeur_carte;
 }
 
-void Carte::affecter(Carte carte) {
+void Carte::affecter(Carte& carte) {
     this->couleur = carte.couleur;
     this->valeur = carte.valeur;
 }
 
-bool Carte::equals(Carte carte) {
+bool Carte::equals(Carte& carte) {
     if (this->couleur == carte.couleur && this->valeur == carte.valeur) {
         return true;
     } else {
