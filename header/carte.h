@@ -29,12 +29,13 @@ public:
 
     void setType(Couleur couleur);
 
-    void setValeur(const char *string);
+    void setValeur(std::string const& valeur_carte);
 
-    void affecter(Carte carte);
+    void affecter(Carte& carte);
 
-    bool equals(Carte carte);
+    bool equals(Carte& carte);
 private:
     std::string valeur;
     Couleur couleur;
+
 };
