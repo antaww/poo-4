@@ -30,9 +30,9 @@ int carte() {
     return 0;
 }
 
-Carte::Carte(Couleur couleur_carte, const char *string) {
+Carte::Carte(Couleur couleur_carte, std::string const& valeur_carte) {
     this->couleur = couleur_carte;
-    this->valeur = string;
+    this->valeur = valeur_carte;
 }
 
 void Carte::afficher() {
@@ -58,4 +58,9 @@ bool Carte::equals(Carte carte) {
     } else {
         return false;
     }
+}
+
+Carte::Carte(const Carte &carte) {
+    this->couleur = carte.couleur;
+    this->valeur = carte.valeur;
 }

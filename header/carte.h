@@ -20,7 +20,9 @@ private:
     std::string valeur;
     Couleur couleur;
 public:
-    Carte(Couleur couleur_carte, const char string[3]);
+    Carte(Couleur couleur_carte, std::string const& valeur_carte);
+
+    Carte(Carte const& carte);
 
     void afficher();
 
