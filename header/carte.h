@@ -27,4 +27,8 @@ public:
     void setType(Couleur couleur);
 
     void setValeur(const char *string);
+
+    void affecter(Carte carte);
+
+    bool equals(Carte carte);
 };
