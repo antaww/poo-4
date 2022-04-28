@@ -18,6 +18,7 @@ enum Couleur {
 class Carte {
 
 public:
+    Carte() = delete;
     Carte(Couleur couleur_carte, std::string const& valeur_carte);
 
     Carte(Carte const& carte);
@@ -25,15 +26,15 @@ public:
     ~Carte();
 
 
-    void afficher();
+    void afficher() const;
 
-    void setType(Couleur couleur);
+    void setType(const Couleur couleur);
 
     void setValeur(std::string const& valeur_carte);
 
-    void affecter(Carte& carte);
+    void affecter(const Carte& carte);
 
-    bool equals(Carte& carte);
+    bool equals(const Carte& carte) const;
 private:
     std::string valeur;
     Couleur couleur;

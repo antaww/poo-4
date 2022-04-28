@@ -41,14 +41,15 @@ Carte::Carte(const Carte &carte) {
 }
 
 Carte::~Carte() {
-    std::cout << "Destruction de la carte" << std::endl;
+    // print card destructor and card name
+    std::cout << "Destruction de la carte " << this->valeur << " de " << Couleurs[this->couleur] << std::endl;
 }
 
-void Carte::afficher() {
+void Carte::afficher() const {
     std::cout << this->valeur << " de " << Couleurs[this->couleur] << std::endl;
 }
 
-void Carte::setType(Couleur couleur) {
+void Carte::setType(const Couleur couleur) {
     this->couleur = couleur;
 }
 
@@ -56,12 +57,12 @@ void Carte::setValeur(std::string const& valeur_carte) {
     this->valeur = valeur_carte;
 }
 
-void Carte::affecter(Carte& carte) {
+void Carte::affecter(const Carte& carte) {
     this->couleur = carte.couleur;
     this->valeur = carte.valeur;
 }
 
-bool Carte::equals(Carte& carte) {
+bool Carte::equals(const Carte& carte) const {
     if (this->couleur == carte.couleur && this->valeur == carte.valeur) {
         return true;
     } else {
