@@ -1,13 +1,18 @@
+#include <string>
+
 #ifndef TP4_MENU_H
 #define TP4_MENU_H
 
 #endif //TP4_MENU_H
 
-//create menu class with functions to display menu and get user input
+
 class Menu {
 public:
-    Menu();
-    void displayMenu();
-    int getUserInput();
-    ~Menu();
+   Menu();
+   ~Menu();
+   static void execute();
+private:
+    static void afficher();
+    static int get_number(const std::string& message);
+    static bool ask_continue();
 };
