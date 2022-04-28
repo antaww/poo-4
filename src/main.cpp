@@ -1,7 +1,9 @@
 #include "../header/carte.h"
+#include "../header/menu.h"
+
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    carte();
+    Menu::execute();
+//    carte();
     return 0;
 }
