@@ -53,5 +53,9 @@ void Carte::affecter(Carte carte) {
 }
 
 bool Carte::equals(Carte carte) {
-    return false;
+    if (this->couleur == carte.couleur && this->valeur == carte.valeur) {
+        return true;
+    } else {
+        return false;
+    }
 }
