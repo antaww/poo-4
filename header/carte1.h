@@ -7,9 +7,9 @@
 #include <iostream>
 
 
-namespace carte1 {
+namespace JeuDeCarte1 {
 
-    int carte();
+    void carte();
 
     enum Couleur {
         PIQUE,

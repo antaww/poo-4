@@ -1,7 +1,7 @@
 #include <array>
 #include "../header/carte1.h"
 
-namespace carte1 {
+namespace JeuDeCarte1 {
 
     std::array<std::string, 4> Couleurs = {"pique", "coeur", "carreau", "trefle"};
 
@@ -62,7 +62,7 @@ namespace carte1 {
  *
  * @return 0
  */
-    int carte() {
+    void carte() {
         std::cout << "Jeu de carte" << std::endl;
         try {
             Carte c1(COEUR, "adazdazd");
@@ -86,6 +86,5 @@ namespace carte1 {
                 std::cout << "Probleme : les cartes ne sont pas egales" << std::endl;
             }
         }
-        return 0;
     }
 }

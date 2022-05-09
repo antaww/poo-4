@@ -2,13 +2,13 @@
 #include <limits>
 #include "../header/menu.h"
 #include "../header/carte1.h"
-
+#include "../header/carte2.h"
+#include "../header/carte3.h"
 
 
 Menu::Menu() = default;
 
 Menu::~Menu() = default;
-
 
 
 void Menu::afficher() {
@@ -18,7 +18,7 @@ void Menu::afficher() {
     std::cout << "2 -> TP 3.2" << std::endl;
 }
 
-int Menu::get_number(const std::string& message) {
+int Menu::get_number(const std::string &message) {
     std::cout << message << std::endl;
     double number;
     std::cout << ">";
@@ -55,12 +55,16 @@ void Menu::execute() {
                 std::cout << "Fin du programme" << std::endl;
                 break;
             case 1:
-                carte1::carte();
+                JeuDeCarte1::carte();
                 std::cout << "TP 3.1" << std::endl;
                 break;
             case 2:
-//                TP3_2::execute();
+                JeuDeCarte2::carte();
                 std::cout << "TP 3.2" << std::endl;
+                break;
+            case 3:
+                F_personne();
+                std::cout << "TP 3.3" << std::endl;
                 break;
             default:
                 std::cout << "Choix invalide" << std::endl;
